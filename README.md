@@ -1,2 +1,2 @@
-# Lab 2 - Starter
-Website URL: https://a452957073.github.io/Lab2_Starter/
+# Lab 3
+Website URL: https://a452957073.github.io/sp26-cse110-lab3/
