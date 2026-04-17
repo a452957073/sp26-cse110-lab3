@@ -4,28 +4,36 @@
     <title>Meeting Minutes</title>
     <meta charset="UTF-8">
     <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        h2 {
+            color: blue;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Pomodoro Timer First Brainstorm</h1>
+    <header id="top-header">
+        <h1 style="text-decoration: underline;">Pomodoro Timer First Brainstorm</h1>
         <h2>Date: April 8, 2026</h2>
     </header>
-    <nav>
+
+    <nav class="nav-box">
         <p>Navigation</p>
     </nav>
     
-      <main>
+    <main class="page-content">
     
-        <section>
+        <section class="card">
           <h3>Attendance</h3>
-          <ul>
+          <ul class="flex-list">
             <li>Alex</li>
             <li>John</li>
             <li>Lisa</li>
           </ul>
         </section>
     
-        <section>
+        <section class="card" id="agenda">
           <h3>Agenda</h3>
           <ol>
             <li>Discuss project idea</li>
@@ -42,7 +50,7 @@
 
         </section>
 
-        <section>
+        <section class="card">
             <h3>Extra Notes</h3>
             <details>
               <summary>Click to see additional comments</summary>
@@ -52,15 +60,15 @@
             </details>
         </section>
 
-        <section>
+        <section class="card">
             <h3>Project Status</h3>
             <hr>
-            <div>
+            <div class="status-box">
               <p><span>Current phase:</span> Initial brainstorming and planning.</p>
             </div>
         </section>
 
-        <section>
+        <section class="card">
             <h3>Feedback Form</h3>
             <form>
               <fieldset>
@@ -125,29 +133,30 @@
             </form>
         </section>
 
+        <section class="card media-grid">
+            <div>
+                <h3>Meeting Diagram</h3>
+                <img src="IMG_1902.jpg" alt="building" width="300">
+            </div>
 
-        <section>
-            <h3>Meeting Diagram</h3>
-            <img src="IMG_1902.jpg" alt="building" width="300">
-         </section>
-
-         <section>
-            <h3>Audio Recording</h3>
-            <audio controls>
-              <source src="加州大学圣地亚哥分校.m4a" type="audio/mpeg">
-            </audio>
-          </section>
+            <div>
+                <h3>Audio Recording</h3>
+                <audio controls>
+                  <source src="加州大学圣地亚哥分校.m4a" type="audio/mpeg">
+                </audio>
+            </div>
         
-        <section>
-        <h3>Video Recording</h3>
-        <video controls width="300">
-            <source src="IMG_1865.MOV" type="video/mp4">
-        </video>
+            <div>
+                <h3>Video Recording</h3>
+                <video controls width="300">
+                    <source src="IMG_1865.MOV" type="video/mp4">
+                </video>
+            </div>
         </section>
 
       </main>
     
-      <footer>
+      <footer class="footer-box">
         <p>End of meeting notes</p>
       </footer>
 
