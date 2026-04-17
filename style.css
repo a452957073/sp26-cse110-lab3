@@ -1,0 +1,241 @@
+/* General page styles and CSS comments */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --main-bg: #f4f7fb;
+  --card-bg: white;
+  --main-text: #222222;
+  --accent-color: orange;
+  --fallback-color: var(--not-defined, teal);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Element selector */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--main-bg, lightgray);
+  color: rgb(34, 34, 34);
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+}
+
+/* ID selector */
+#top-header {
+  background-color: hsl(210, 60%, 92%);
+  color: #1d3557;
+  text-align: center;
+  padding: 20px 10px 20px 10px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Class selector */
+.nav-box {
+  background-color: color-mix(in srgb, skyblue 70%, white 30%);
+  border-style: solid;
+  border-color: #5c677d;
+  border-width: 2px;
+  border-radius: 8px;
+  margin: 10px auto 20px auto;
+  padding: 0.8rem 1rem 0.8rem 1rem;
+  width: 80%;
+  max-width: 900px;
+  text-align: center;
+}
+
+/* Combining two selectors */
+section.card {
+  background-color: var(--card-bg, #ffffff);
+  color: var(--fallback-color, green);
+  margin-top: 16px;
+  margin-right: auto;
+  margin-bottom: 16px;
+  margin-left: auto;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  border: 3px solid rgba(29, 53, 87, 0.4);
+  border-radius: 12px;
+  width: 85%;
+  max-width: 900px;
+  min-width: 250px;
+}
+
+/* Selector list */
+h1, h3 {
+  text-align: center;
+}
+
+/* Descendant combinator */
+section p {
+  line-height: 1.6;
+}
+
+/* Child combinator */
+ul > li {
+  list-style-type: square;
+}
+
+/* General sibling combinator */
+h3 ~ p {
+  font-size: 1rem;
+}
+
+/* Adjacent sibling combinator */
+h3 + ol {
+  background-color: rgba(255, 243, 205, 0.8);
+  padding: 1rem;
+}
+
+/* Attribute selector */
+input[type="text"] {
+  border: 2px solid gray;
+  padding: 6px;
+}
+
+/* Another attribute selector */
+input[type="date"] {
+  border: 2px dashed #457b9d;
+}
+
+/* Pseudo-class selectors */
+a:hover {
+  color: red;
+}
+
+button:hover {
+  background-color: lightblue;
+}
+
+button:active {
+  background-color: orange;
+}
+
+/* Display values */
+nav p {
+  display: inline-block;
+  font-weight: bold;
+}
+
+footer p {
+  display: block;
+}
+
+/* Flexbox layout */
+.flex-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  padding: 0;
+}
+
+/* Grid layout */
+.media-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  align-items: start;
+  justify-items: center;
+}
+
+/* Box model examples */
+.status-box {
+  margin: 10px;
+  padding: 12px;
+  border-style: dashed;
+  border-color: orange;
+  border-width: 3px;
+  border-radius: 10px;
+  background-color: color(display-p3 0.9 0.95 1 / 1);
+}
+
+/* Text styling */
+span {
+  color: orange;
+  text-decoration: underline;
+}
+
+/* Position examples */
+footer {
+  position: relative;
+}
+
+img {
+  width: 300px;
+  height: auto;
+  max-width: 100%;
+  border: 4px solid #8d99ae;
+  border-radius: 1cm;
+}
+
+/* Absolute unit examples */
+video {
+  border: 2px solid black;
+  width: 300px;
+}
+
+audio {
+  width: 250px;
+}
+
+legend {
+  font-size: 12pt;
+}
+
+/* Relative unit examples */
+.page-content {
+  padding: 2rem;
+  font-size: 100%;
+}
+
+textarea {
+  width: 60%;
+  min-height: 8em;
+}
+
+footer {
+  margin: 2vw;
+}
+
+/* :has() selector */
+section:has(form) {
+  background-color: #eef7ff;
+}
+
+/* Nested selectors */
+.card {
+  & summary {
+    cursor: pointer;
+    color: navy;
+  }
+
+  & summary:hover {
+    color: crimson;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .media-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .flex-list {
+    flex-direction: column;
+  }
+
+  section.card {
+    width: 95%;
+  }
+
+  body {
+    font-size: 0.95rem;
+  }
+}
