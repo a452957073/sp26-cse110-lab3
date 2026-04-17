@@ -209,16 +209,14 @@ section:has(form) {
   background-color: #eef7ff;
 }
 
-/* Nested selectors */
-.card {
-  & summary {
-    cursor: pointer;
-    color: navy;
-  }
+/* Nested selectors (converted to standard selectors for validation) */
+.card summary {
+  cursor: pointer;
+  color: navy;
+}
 
-  & summary:hover {
-    color: crimson;
-  }
+.card summary:hover {
+  color: crimson;
 }
 
 /* Responsive design */
